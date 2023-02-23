@@ -55,6 +55,13 @@ namespace Nuke.CodeGeneration.Model
         [Description("ID for the NuGet package.")]
         public string PackageId { get; set; }
 
+        [JsonIgnore]
+        public string NuGetPackageId => PackageId;
+        
+        public string NpmPackageId { get; set; }
+        
+        public string AptGetPackageId { get; set; }
+
         [Description("Exact name of the main executable found in the './tools' folder. Case-sensitive.")]
         public string PackageExecutable { get; set; }
 
